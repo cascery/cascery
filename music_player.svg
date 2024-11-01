@@ -1,7 +1,11 @@
 <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <body xmlns="http://www.w3.org/1999/xhtml">
-      <iframe src="https://github.com/cascery/cascery/blob/main/music_player.html" width="800" height="800" style="border: none;"></iframe>
+      <div style="font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+        <h1 style="color: #333;">Hello, World!</h1>
+        <p>This is a test to check if the SVG foreignObject works.</p>
+      </div>
     </body>
   </foreignObject>
 </svg>
+
