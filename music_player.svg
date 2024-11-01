@@ -1,0 +1,7 @@
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <body xmlns="http://www.w3.org/1999/xhtml">
+      <iframe src="https://cascery.vercel.app/music_player.html" width="500" height="300" style="border: none;"></iframe>
+    </body>
+  </foreignObject>
+</svg>
