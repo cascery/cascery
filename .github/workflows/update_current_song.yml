@@ -1,0 +1,32 @@
+name: Update Current Song
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # Every 10 minutes
+  workflow_dispatch:
+
+jobs:
+  update_song:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install node-fetch
+
+      - name: Run script to update current song
+        run: node update_current_song.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "your-email@example.com"
+          git config --local user.name "your-github-username"
+          git add CURRENT_SONG.md
+          git commit -m "Update currently playing song" || echo "No changes to commit"
+          git push
